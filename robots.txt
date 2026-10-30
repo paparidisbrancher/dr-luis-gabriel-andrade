@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paparidisbrancher.github.io/dr-luis-gabriel-andrade/sitemap.xml
