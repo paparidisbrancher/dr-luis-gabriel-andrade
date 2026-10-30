@@ -77,24 +77,31 @@ img{display:block;max-width:100%}
 .filtro{font-family:inherit;cursor:pointer;flex:0 0 auto;min-height:44px;padding:0 16px;border:1px solid #BDB8AE;background:transparent;color:#111;font-size:11px;font-weight:600;letter-spacing:0.18em;transition:background .2s,color .2s}
 .filtro[aria-pressed="true"]{background:#111;color:#F4F2EE;border-color:#111}
 .filtros{scrollbar-width:none}
+@media (max-width:760px){
+  .topo{flex-wrap:nowrap!important}
+  .topo-nome{font-size:11px!important;letter-spacing:0.18em!important}
+  .topo-sub{font-size:9px!important;letter-spacing:0.26em!important}
+  .topo-nav,.so-desk{display:none!important}
+  .topo-cta{padding:9px 12px!important;white-space:nowrap}
+}
 </style>
 </head>
 <body>
 
 <header style="background:#000;border-bottom:1px solid #1E1D1B">
-  <div style="max-width:1280px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
+  <div class="topo" style="max-width:1280px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
     <a href="#inicio" style="text-decoration:none;display:flex;flex-direction:column;gap:4px">
-      <span style="font-size:13px;font-weight:400;letter-spacing:0.24em;color:#E8E6E3">DR. LUÍS GABRIEL ANDRADE</span>
-      <span style="font-size:10px;font-weight:400;letter-spacing:0.32em;color:#C2AA84">HARMONIZAÇÃO FACIAL</span>
+      <span class="topo-nome" style="font-size:13px;font-weight:400;letter-spacing:0.24em;color:#E8E6E3">DR. LUÍS GABRIEL ANDRADE</span>
+      <span class="topo-sub" style="font-size:10px;font-weight:400;letter-spacing:0.32em;color:#C2AA84">HARMONIZAÇÃO FACIAL</span>
     </a>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px">
-      <nav aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:4px 20px;font-size:11px;font-weight:500;letter-spacing:0.14em">
+      <nav class="topo-nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:4px 20px;font-size:11px;font-weight:500;letter-spacing:0.14em">
         <a href="#sobre" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">SOBRE</a>
         <a href="#procedimentos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">PROCEDIMENTOS</a>
         <a href="#casos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">CASOS</a>
         <a href="#atendimento" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">ATENDIMENTO</a>
       </nav>
-      <a href="#contato" class="h-fill" style="text-decoration:none;border:1px solid #C2AA84;color:#C2AA84;padding:11px 18px;font-size:11px;font-weight:600;letter-spacing:0.16em;transition:background .2s,color .2s">AGENDAR AVALIAÇÃO</a>
+      <a href="#contato" class="h-fill topo-cta" style="text-decoration:none;border:1px solid #C2AA84;color:#C2AA84;padding:11px 18px;font-size:11px;font-weight:600;letter-spacing:0.16em;transition:background .2s,color .2s">AGENDAR<span class="so-desk"> AVALIAÇÃO</span></a>
     </div>
   </div>
 </header>
