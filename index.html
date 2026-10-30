@@ -31,8 +31,9 @@
   "name": "Dr. Luís Gabriel Andrade · Harmonização Facial",
   "url": "https://paparidisbrancher.github.io/dr-luis-gabriel-andrade/",
   "image": "https://paparidisbrancher.github.io/dr-luis-gabriel-andrade/assets/og-image.jpg",
+  "telephone": "+55-35-99826-2230",
   "description": "Harmonização facial, toxina botulínica, rinomodelação e otomodelação com avaliação individual.",
-  "sameAs": ["https://www.instagram.com/drluisgabriel_andrade/"],
+  "sameAs": ["https://www.instagram.com/drluisgabriel_andrade/", "https://wa.me/5535998262230"],
   "areaServed": [
     {"@type": "City", "name": "Alfenas", "containedInPlace": {"@type": "State", "name": "Minas Gerais"}},
     {"@type": "City", "name": "Poços de Caldas", "containedInPlace": {"@type": "State", "name": "Minas Gerais"}},
@@ -58,221 +59,280 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:#000;color:#E8E6E3;font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#000;color:#E8E6E3;font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:hover{color:#C2AA84}
+button{font-family:inherit}
 :focus-visible{outline:1px solid #C2AA84;outline-offset:4px}
 img{display:block;max-width:100%}
+.serif{font-family:'Bodoni Moda',Didot,serif;font-weight:400}
+.zi{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.zi:hover{transform:scale(1.03)}
 .h-light:hover{color:#E8E6E3!important}
 .h-fill:hover{background:#C2AA84!important;color:#000!important}
 .h-soft:hover{background:#D6C3A2!important;color:#000!important}
 .h-line:hover{border-color:#C2AA84!important;color:#E8E6E3!important}
 .h-brown:hover{color:#6E5A39!important}
 .h-dark:hover{background:#2A2826!important;color:#E8E6E3!important}
-.filtro{font-family:inherit;cursor:pointer;flex:0 0 auto;min-height:44px;padding:0 16px;border:1px solid #BDB8AE;background:transparent;color:#111;font-size:11px;font-weight:600;letter-spacing:0.18em;transition:background .2s,color .2s}
-.filtro[aria-pressed="true"]{background:#111;color:#F4F2EE;border-color:#111}
+.h-ink:hover{border-color:#111!important;color:#111!important}
+.h-gold:hover{color:#C2AA84!important}
+.h-white:hover{color:#E8E6E3!important;border-color:#E8E6E3!important}
+.h-invert:hover{background:#111!important;color:#F4F2EE!important}
+/* topo: navegação no computador, botão de menu no celular */
+.so-movel{display:none!important}
+@media (max-width:819px){.so-desk{display:none!important}.so-movel{display:flex!important}.topo-sub{letter-spacing:0.18em!important}}
+/* casos */
 .filtros{scrollbar-width:none}
-@media (max-width:760px){
-  .topo{flex-wrap:nowrap!important}
-  .topo-nome{font-size:11px!important;letter-spacing:0.18em!important}
-  .topo-sub{font-size:9px!important;letter-spacing:0.26em!important}
-  .topo-nav,.so-desk{display:none!important}
-  .topo-cta{padding:9px 12px!important;white-space:nowrap}
-}
+.filtro{flex:0 0 auto;cursor:pointer;min-height:44px;padding:0 16px;border:1px solid #BDB8AE;background:transparent;color:#111;font-size:11px;font-weight:600;letter-spacing:0.18em;transition:background .2s,color .2s}
+.filtro[aria-pressed="true"]{background:#111;color:#F4F2EE;border-color:#111}
+.caso{padding:0;border:0;background:none;color:#111;text-align:left;cursor:zoom-in;display:flex;flex-direction:column;gap:8px}
+.caso-img{display:block;width:100%;overflow:hidden;background:#D3D4CC}
+.caso-img img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.caso:hover .caso-img img{transform:scale(1.04)}
+.caso-leg{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5}
+.caso-leg span+span{color:#6E5A39}
+.lb-btn{width:48px;height:48px;background:none;border:1px solid #4A4743;color:#E8E6E3;font-size:18px;cursor:pointer}
+/* barra fixa de WhatsApp no celular */
+.barra{display:none}
+@media (max-width:819px){.barra.on{display:block}}
 </style>
 </head>
 <body>
 
-<header style="background:#000;border-bottom:1px solid #1E1D1B">
-  <div class="topo" style="max-width:1280px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
-    <a href="#inicio" style="text-decoration:none;display:flex;flex-direction:column;gap:4px">
-      <span class="topo-nome" style="font-size:13px;font-weight:400;letter-spacing:0.24em;color:#E8E6E3">DR. LUÍS GABRIEL ANDRADE</span>
-      <span class="topo-sub" style="font-size:10px;font-weight:400;letter-spacing:0.32em;color:#C2AA84">HARMONIZAÇÃO FACIAL</span>
+<header style="position:sticky;top:0;z-index:50;background:rgba(0,0,0,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1E1D1B">
+  <div style="max-width:1320px;margin:0 auto;padding:12px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px">
+    <a href="#inicio" style="text-decoration:none;display:flex;flex-direction:column;gap:2px;color:#E8E6E3">
+      <span class="serif" style="font-size:19px;line-height:1.2">Dr. Luís Gabriel Andrade</span>
+      <span class="topo-sub" style="font-size:9px;font-weight:500;letter-spacing:0.28em;color:#C2AA84;white-space:nowrap">HARMONIZAÇÃO FACIAL · OTOMODELAÇÃO</span>
     </a>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px">
-      <nav class="topo-nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:4px 20px;font-size:11px;font-weight:500;letter-spacing:0.14em">
-        <a href="#sobre" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">SOBRE</a>
-        <a href="#procedimentos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">PROCEDIMENTOS</a>
-        <a href="#casos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">CASOS</a>
-        <a href="#atendimento" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:6px 0">ATENDIMENTO</a>
+    <div class="so-desk" style="display:flex;align-items:center;gap:32px">
+      <nav aria-label="Navegação principal" style="display:flex;gap:26px;font-size:11px;font-weight:500;letter-spacing:0.16em">
+        <a href="#sobre" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">SOBRE</a>
+        <a href="#procedimentos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">PROCEDIMENTOS</a>
+        <a href="#casos" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">CASOS</a>
+        <a href="#atendimento" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">ATENDIMENTO</a>
+        <a href="#contato" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">CONTATO</a>
       </nav>
-      <a href="#contato" class="h-fill topo-cta" style="text-decoration:none;border:1px solid #C2AA84;color:#C2AA84;padding:11px 18px;font-size:11px;font-weight:600;letter-spacing:0.16em;transition:background .2s,color .2s">AGENDAR<span class="so-desk"> AVALIAÇÃO</span></a>
+      <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="h-fill" style="text-decoration:none;border:1px solid #C2AA84;color:#C2AA84;padding:11px 18px;font-size:11px;font-weight:600;letter-spacing:0.16em;transition:background .25s,color .25s">AGENDAR AVALIAÇÃO</a>
     </div>
+    <button type="button" id="menu-btn" class="so-movel" aria-expanded="false" aria-controls="menu-movel" style="min-height:44px;min-width:44px;padding:0 4px;align-items:center;justify-content:center;background:none;border:0;color:#E8E6E3;font-size:11px;font-weight:600;letter-spacing:0.22em;cursor:pointer">MENU</button>
   </div>
 </header>
 
+<div id="menu-movel" hidden style="position:fixed;inset:65px 0 0 0;z-index:49;background:#000;padding:32px 24px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;overflow-y:auto">
+  <nav aria-label="Menu" style="display:flex;flex-direction:column">
+    <a href="#sobre" class="serif" style="text-decoration:none;color:#E8E6E3;font-size:34px;line-height:1.2;padding:14px 0;border-bottom:1px solid #1E1D1B">Sobre</a>
+    <a href="#procedimentos" class="serif" style="text-decoration:none;color:#E8E6E3;font-size:34px;line-height:1.2;padding:14px 0;border-bottom:1px solid #1E1D1B">Procedimentos</a>
+    <a href="#casos" class="serif" style="text-decoration:none;color:#E8E6E3;font-size:34px;line-height:1.2;padding:14px 0;border-bottom:1px solid #1E1D1B">Casos</a>
+    <a href="#atendimento" class="serif" style="text-decoration:none;color:#E8E6E3;font-size:34px;line-height:1.2;padding:14px 0;border-bottom:1px solid #1E1D1B">Atendimento</a>
+    <a href="#contato" class="serif" style="text-decoration:none;color:#E8E6E3;font-size:34px;line-height:1.2;padding:14px 0;border-bottom:1px solid #1E1D1B">Contato</a>
+  </nav>
+  <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" style="text-decoration:none;background:#C2AA84;color:#000;padding:18px 24px;text-align:center;font-size:12px;font-weight:600;letter-spacing:0.16em">AGENDAR PELO WHATSAPP</a>
+</div>
+
 <main>
-<section id="inicio" style="background:#000">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(28px,6vw,80px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(28px,5vw,64px);align-items:center">
-    <div style="display:flex;flex-direction:column;gap:clamp(18px,2.6vw,28px)">
-      <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:0.26em;color:#C2AA84">
-        <span style="width:32px;height:1px;background:#C2AA84"></span>
+<section id="inicio" style="background:#000;overflow:hidden">
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(28px,5vw,80px) clamp(20px,4vw,48px) clamp(48px,7vw,104px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(32px,5vw,80px);align-items:end">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,32px)">
+      <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#C2AA84">
+        <span style="width:28px;height:1px;background:#C2AA84;flex:none"></span>
         <h1 style="margin:0;font:inherit;letter-spacing:inherit;text-transform:uppercase">Harmonização facial · Otomodelação</h1>
       </div>
-      <p style="margin:0;font-weight:300;font-size:clamp(27px,4.6vw,60px);line-height:1.18;letter-spacing:0.08em;text-transform:uppercase;text-wrap:balance">
-        <span style="display:block;color:#E8E6E3">Naturalidade em</span>
-        <span style="display:block;color:#C2AA84">cada detalhe.</span>
-      </p>
-      <span style="width:72px;height:1px;background:#C2AA84"></span>
-      <p style="margin:0;max-width:30em;font-size:clamp(16px,1.4vw,19px);font-weight:300;color:#CFCBC4;text-wrap:pretty">Harmonização facial e otomodelação com atenção à sua individualidade.</p>
+      <p class="serif" style="margin:0;font-size:clamp(46px,7.4vw,116px);line-height:0.98;letter-spacing:-0.015em;color:#E8E6E3;text-wrap:balance">Naturalidade em cada <em style="font-style:italic;color:#C2AA84">detalhe.</em></p>
+      <p style="margin:0;max-width:28em;font-size:clamp(16px,1.3vw,18px);color:#CFCBC4;text-wrap:pretty">Harmonização facial e otomodelação com técnica, precisão e atenção à individualidade de cada rosto.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="#contato" class="h-soft" style="text-decoration:none;background:#C2AA84;color:#000;padding:16px 24px;font-size:12px;flex:1 1 auto;text-align:center;font-weight:600;letter-spacing:0.16em;transition:background .2s">AGENDAR AVALIAÇÃO</a>
-        <a href="#casos" class="h-line" style="text-decoration:none;border:1px solid #4A4743;color:#E8E6E3;padding:15px 24px;font-size:12px;flex:1 1 auto;text-align:center;font-weight:600;letter-spacing:0.16em;transition:border-color .2s">VER CASOS</a>
+        <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="h-soft" style="flex:1 1 auto;text-align:center;text-decoration:none;background:#C2AA84;color:#000;padding:17px 26px;font-size:12px;font-weight:600;letter-spacing:0.16em;transition:background .25s">AGENDAR PELO WHATSAPP</a>
+        <a href="#casos" class="h-line" style="flex:1 1 auto;text-align:center;text-decoration:none;border:1px solid #4A4743;color:#E8E6E3;padding:16px 26px;font-size:12px;font-weight:600;letter-spacing:0.16em;transition:border-color .25s">VER CASOS</a>
       </div>
-      <p style="margin:0;font-size:11px;font-weight:400;letter-spacing:0.16em;line-height:1.8;color:#9C988F">ILICÍNEA · ALFENAS · POÇOS DE CALDAS · CARMO DA CACHOEIRA</p>
+      <p style="margin:0;font-size:11px;letter-spacing:0.18em;line-height:1.9;color:#9C988F">ALFENAS · POÇOS DE CALDAS · ILICÍNEA · CARMO DA CACHOEIRA</p>
     </div>
-    <figure style="margin:0;position:relative">
-      <div style="position:absolute;inset:-14px 14px 14px -14px;border:1px solid #3A3631;pointer-events:none"></div>
-      <img src="assets/retrato-bracos-cruzados-limpo.webp" alt="Retrato do Dr. Luís Gabriel Andrade de braços cruzados" width="1400" height="1445" fetchpriority="high" style="position:relative;width:100%;height:auto;aspect-ratio:1400/1445;background:#C8C2B6">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+      <div data-reveal="mask" style="overflow:hidden;background:#C8C2B6">
+        <img class="zi" src="assets/retrato-bracos-cruzados-limpo.webp" alt="Retrato do Dr. Luís Gabriel Andrade de braços cruzados" width="1400" height="1445" fetchpriority="high" style="width:100%;height:auto;aspect-ratio:1400/1445">
+      </div>
+      <figcaption style="display:flex;justify-content:space-between;gap:12px;font-size:10px;font-weight:500;letter-spacing:0.2em;color:#8F8B84">
+        <span>DR. LUÍS GABRIEL ANDRADE</span>
+        <span>CRO-MG 76814</span>
+      </figcaption>
     </figure>
   </div>
 </section>
 
 <section id="sobre" style="background:#F4F2EE;color:#111">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(28px,5vw,64px);align-items:start">
-    <img src="assets/DZDJShuO4_P-01.webp" alt="Dr. Luís Gabriel Andrade aplicando toxina botulínica em uma paciente" width="1000" height="1775" loading="lazy" style="width:100%;max-width:460px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;background:#D3D4CC">
-    <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,24px)">
-      <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:0.26em;color:#6E5A39">
-        <span style="width:32px;height:1px;background:#6E5A39"></span>
-        <span>SOBRE</span>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(40px,6vw,88px)">
+    <p data-reveal="up" class="serif" style="margin:0;max-width:15em;font-size:clamp(34px,5.2vw,76px);line-height:1.06;letter-spacing:-0.01em;text-wrap:balance">Aqui, o objetivo não é mudar. <em style="color:#6E5A39">É reequilibrar.</em></p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,80px);align-items:center">
+      <div data-reveal="mask" style="overflow:hidden;max-width:520px;background:#D3D4CC">
+        <img class="zi" src="assets/DZDJShuO4_P-01.webp" alt="Dr. Luís Gabriel Andrade aplicando toxina botulínica em uma paciente" width="1000" height="1775" loading="lazy" style="width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%">
       </div>
-      <h2 style="margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;text-wrap:balance">Dr. Luís Gabriel Andrade</h2>
-      <p style="margin:0;max-width:34em;font-size:17px;color:#3B3A37;text-wrap:pretty">Atua em harmonização facial e otomodelação, com atendimentos em Ilicínea, Alfenas, Poços de Caldas e Carmo da Cachoeira. Cada tratamento parte de uma avaliação individual e de um planejamento pensado para respeitar os traços e a expressão de cada pessoa.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #CFCBC3">
-        <div style="padding:16px 16px 0 0;display:flex;flex-direction:column;gap:4px">
-          <span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">01</span>
-          <span style="font-size:13px;font-weight:500;letter-spacing:0.18em">NATURALIDADE</span>
+      <div data-reveal="up" style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,26px);max-width:34em">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#6E5A39">
+          <span style="width:28px;height:1px;background:#6E5A39"></span>
+          <span>SOBRE</span>
         </div>
-        <div style="padding:16px 16px 0 0;display:flex;flex-direction:column;gap:4px">
-          <span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">02</span>
-          <span style="font-size:13px;font-weight:500;letter-spacing:0.18em">TÉCNICA</span>
+        <h2 class="serif" style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.1">Dr. Luís Gabriel Andrade</h2>
+        <p style="margin:0;font-size:17px;color:#3B3A37;text-wrap:pretty">Atua em harmonização facial e otomodelação no Sul de Minas. Cada tratamento parte de uma avaliação individual e de um planejamento pensado para respeitar os traços e a expressão de cada pessoa.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 22px;padding-top:18px;border-top:1px solid #CFCBC3;font-size:11px;font-weight:600;letter-spacing:0.2em">
+          <span>NATURALIDADE</span>
+          <span style="color:#A8916A">·</span>
+          <span>TÉCNICA</span>
+          <span style="color:#A8916A">·</span>
+          <span>PRECISÃO</span>
         </div>
-        <div style="padding:16px 16px 0 0;display:flex;flex-direction:column;gap:4px">
-          <span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">03</span>
-          <span style="font-size:13px;font-weight:500;letter-spacing:0.18em">PRECISÃO</span>
-        </div>
+        <span style="font-size:11px;font-weight:500;letter-spacing:0.18em;color:#55524C">CRO-MG 76814</span>
       </div>
-      <span style="font-size:12px;font-weight:500;letter-spacing:0.18em;color:#55524C">CRO-MG 76814</span>
     </div>
   </div>
 </section>
 
 <section id="procedimentos" style="background:#000">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px">
-      <div style="display:flex;flex-direction:column;gap:clamp(14px,2vw,20px)">
-        <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:0.26em;color:#C2AA84">
-          <span style="width:32px;height:1px;background:#C2AA84"></span>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(32px,4.5vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#C2AA84">
+          <span style="width:28px;height:1px;background:#C2AA84"></span>
           <span>PROCEDIMENTOS</span>
         </div>
-        <h2 style="margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase">Cada rosto, <span style="color:#C2AA84">um plano.</span></h2>
+        <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(34px,4.8vw,68px);line-height:1.04">Cada rosto, <em style="color:#C2AA84">um plano.</em></h2>
       </div>
-      <p style="margin:0;max-width:26em;font-size:15px;color:#A8A49D">A indicação de cada procedimento é definida somente após avaliação individual.</p>
+      <p style="margin:0;max-width:24em;font-size:15px;color:#A8A49D">A indicação de cada procedimento é definida somente após avaliação individual.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:0 40px">
-      <article style="border-top:1px solid #34312D;padding:20px 0 24px;display:flex;flex-direction:column;gap:10px">
-        <span style="font-size:11px;font-weight:500;letter-spacing:0.22em;color:#C2AA84">01</span>
-        <h3 style="margin:0;font-size:15px;font-weight:500;letter-spacing:0.2em">HARMONIZAÇÃO FACIAL</h3>
-        <p style="margin:0;font-size:15px;color:#B5B1AA;text-wrap:pretty">Procedimentos que buscam equilíbrio entre as proporções do rosto, como o uso de ácido hialurônico em lábios, mento e contorno.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(36px,4vw,56px) clamp(24px,3vw,40px)">
+      <article data-reveal="up" style="display:flex;flex-direction:column;gap:18px">
+        <div style="overflow:hidden;background:#141414"><img class="zi" src="assets/DYf9wsTNhFo-01.webp" alt="Harmonização de perfil: nariz, lábio e mento" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%"></div>
+        <div style="display:flex;align-items:baseline;gap:16px"><span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#C2AA84">01</span><h3 class="serif" style="margin:0;font-size:clamp(26px,2.6vw,34px);line-height:1.15">Harmonização facial</h3></div>
+        <p style="margin:0;font-size:15px;color:#B5B1AA;max-width:32em;text-wrap:pretty">Procedimentos que buscam equilíbrio entre as proporções do rosto, como o uso de ácido hialurônico em lábios, mento e contorno.</p>
+        <a href="#casos" data-ir="full" class="h-white" style="align-self:flex-start;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.2em;color:#C2AA84;padding:10px 0;border-bottom:1px solid #4A4339">VER CASOS →</a>
       </article>
-      <article style="border-top:1px solid #34312D;padding:20px 0 24px;display:flex;flex-direction:column;gap:10px">
-        <span style="font-size:11px;font-weight:500;letter-spacing:0.22em;color:#C2AA84">02</span>
-        <h3 style="margin:0;font-size:15px;font-weight:500;letter-spacing:0.2em">TOXINA BOTULÍNICA</h3>
-        <p style="margin:0;font-size:15px;color:#B5B1AA;text-wrap:pretty">Atua na comunicação entre nervo e músculo para suavizar rugas dinâmicas, buscando preservar a expressão.</p>
+      <article data-reveal="up" style="display:flex;flex-direction:column;gap:18px">
+        <div style="overflow:hidden;background:#141414"><img class="zi" src="assets/DagmQiuDoTN-02.webp" alt="Toxina botulínica full face, antes e depois" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%"></div>
+        <div style="display:flex;align-items:baseline;gap:16px"><span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#C2AA84">02</span><h3 class="serif" style="margin:0;font-size:clamp(26px,2.6vw,34px);line-height:1.15">Toxina botulínica</h3></div>
+        <p style="margin:0;font-size:15px;color:#B5B1AA;max-width:32em;text-wrap:pretty">Atua na comunicação entre nervo e músculo para suavizar rugas dinâmicas, buscando preservar a expressão.</p>
+        <a href="#casos" data-ir="toxina" class="h-white" style="align-self:flex-start;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.2em;color:#C2AA84;padding:10px 0;border-bottom:1px solid #4A4339">VER CASOS →</a>
       </article>
-      <article style="border-top:1px solid #34312D;padding:20px 0 24px;display:flex;flex-direction:column;gap:10px">
-        <span style="font-size:11px;font-weight:500;letter-spacing:0.22em;color:#C2AA84">03</span>
-        <h3 style="margin:0;font-size:15px;font-weight:500;letter-spacing:0.2em">RINOMODELAÇÃO</h3>
-        <p style="margin:0;font-size:15px;color:#B5B1AA;text-wrap:pretty">Ajustes no contorno do nariz sem cortes. A viabilidade é analisada caso a caso, na avaliação.</p>
+      <article data-reveal="up" style="display:flex;flex-direction:column;gap:18px">
+        <div style="overflow:hidden;background:#141414"><img class="zi" src="assets/DSIYzDxDpan-02.webp" alt="Rinomodelação, antes e depois de perfil" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%"></div>
+        <div style="display:flex;align-items:baseline;gap:16px"><span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#C2AA84">03</span><h3 class="serif" style="margin:0;font-size:clamp(26px,2.6vw,34px);line-height:1.15">Rinomodelação</h3></div>
+        <p style="margin:0;font-size:15px;color:#B5B1AA;max-width:32em;text-wrap:pretty">Ajustes no contorno do nariz sem cortes. A viabilidade é analisada caso a caso, na avaliação.</p>
+        <a href="#casos" data-ir="nariz" class="h-white" style="align-self:flex-start;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.2em;color:#C2AA84;padding:10px 0;border-bottom:1px solid #4A4339">VER CASOS →</a>
       </article>
-      <article style="border-top:1px solid #34312D;padding:20px 0 24px;display:flex;flex-direction:column;gap:10px">
-        <span style="font-size:11px;font-weight:500;letter-spacing:0.22em;color:#C2AA84">04</span>
-        <h3 style="margin:0;font-size:15px;font-weight:500;letter-spacing:0.2em">OTOMODELAÇÃO</h3>
-        <p style="margin:0;font-size:15px;color:#B5B1AA;text-wrap:pretty">Procedimento voltado ao contorno e à projeção das orelhas. A indicação depende de avaliação individual.</p>
+      <article data-reveal="up" style="display:flex;flex-direction:column;gap:18px">
+        <div style="overflow:hidden;background:#141414"><img class="zi" src="assets/resultado-otomodelacao-adulto.webp" alt="Otomodelação, antes e depois" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 20%"></div>
+        <div style="display:flex;align-items:baseline;gap:16px"><span style="font-size:11px;font-weight:600;letter-spacing:0.22em;color:#C2AA84">04</span><h3 class="serif" style="margin:0;font-size:clamp(26px,2.6vw,34px);line-height:1.15">Otomodelação</h3></div>
+        <p style="margin:0;font-size:15px;color:#B5B1AA;max-width:32em;text-wrap:pretty">Procedimento voltado ao contorno e à projeção das orelhas. A indicação depende de avaliação individual.</p>
+        <a href="#casos" data-ir="oto" class="h-white" style="align-self:flex-start;text-decoration:none;font-size:11px;font-weight:600;letter-spacing:0.2em;color:#C2AA84;padding:10px 0;border-bottom:1px solid #4A4339">VER CASOS →</a>
       </article>
     </div>
   </div>
 </section>
 
 <section id="casos" style="background:#F4F2EE;color:#111">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(24px,3.5vw,36px)">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px">
-      <div style="display:flex;flex-direction:column;gap:clamp(14px,2vw,20px)">
-        <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:0.26em;color:#6E5A39">
-          <span style="width:32px;height:1px;background:#6E5A39"></span>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(32px,4.5vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#6E5A39">
+          <span style="width:28px;height:1px;background:#6E5A39"></span>
           <span>CASOS</span>
         </div>
-        <h2 style="margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase">Antes <span style="color:#6E5A39">e depois.</span></h2>
+        <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(34px,4.8vw,68px);line-height:1.04;text-wrap:balance">Realçar, <em style="color:#6E5A39">sem mudar a essência.</em></h2>
       </div>
-      <p style="margin:0;max-width:30em;font-size:14px;color:#4A4844">Imagens publicadas pelo profissional. Resultados variam de pessoa para pessoa e dependem de avaliação individual.</p>
+      <p style="margin:0;max-width:26em;font-size:14px;color:#4A4844">Imagens publicadas pelo profissional. Resultados variam de pessoa para pessoa e dependem de avaliação individual.</p>
     </div>
-    <div class="filtros" role="group" aria-label="Filtrar casos por procedimento" style="display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;margin:0 calc(-1 * clamp(20px,4vw,48px));padding:0 clamp(20px,4vw,48px) 4px">
-      <button type="button" class="filtro" data-filtro="all" aria-pressed="true">TODOS</button>
-      <button type="button" class="filtro" data-filtro="full" aria-pressed="false">FULL FACE</button>
-      <button type="button" class="filtro" data-filtro="labios" aria-pressed="false">LÁBIOS E MENTO</button>
-      <button type="button" class="filtro" data-filtro="nariz" aria-pressed="false">NARIZ</button>
-      <button type="button" class="filtro" data-filtro="toxina" aria-pressed="false">TOXINA</button>
-      <button type="button" class="filtro" data-filtro="oto" aria-pressed="false">OTOMODELAÇÃO</button>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
+      <div data-reveal="up" style="position:relative;width:100%;max-width:560px;aspect-ratio:4/5;overflow:hidden;background:#D3D4CC;user-select:none;touch-action:pan-y">
+        <div role="img" aria-label="Antes do preenchimento labial" style="position:absolute;inset:0;background-image:url(assets/DXXm9NMjizS-01.webp);background-size:200% auto;background-position:0% 58%"></div>
+        <div id="ba-depois" role="img" aria-label="Depois do preenchimento labial" style="position:absolute;inset:0;background-image:url(assets/DXXm9NMjizS-01.webp);background-size:200% auto;background-position:100% 58%;clip-path:inset(0 0 0 50%)"></div>
+        <div id="ba-linha" style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:#FFFFFF;pointer-events:none">
+          <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,0.6);border:1px solid #FFFFFF;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:14px;letter-spacing:0.1em">‹ ›</span>
+        </div>
+        <span style="position:absolute;top:14px;left:14px;padding:5px 10px;background:rgba(0,0,0,0.6);color:#FFFFFF;font-size:10px;font-weight:600;letter-spacing:0.2em;pointer-events:none">ANTES</span>
+        <span style="position:absolute;top:14px;right:14px;padding:5px 10px;background:rgba(0,0,0,0.6);color:#FFFFFF;font-size:10px;font-weight:600;letter-spacing:0.2em;pointer-events:none">DEPOIS</span>
+        <input id="ba" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois" style="position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:28em">
+        <span style="font-size:11px;font-weight:600;letter-spacing:0.24em;color:#6E5A39">CASO EM DESTAQUE</span>
+        <h3 class="serif" style="margin:0;font-size:clamp(28px,3vw,40px);line-height:1.12">Lábios, vista frontal</h3>
+        <p style="margin:0;font-size:16px;color:#3B3A37">Arraste a linha sobre a foto para comparar o antes e o depois.</p>
+      </div>
     </div>
-    <div id="lista-casos" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(44%,240px),1fr));gap:clamp(18px,2.4vw,28px) clamp(10px,2vw,20px)">
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DfDTSznotBr-01.webp" alt="Antes e depois de harmonização full face, vista frontal" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>FULL FACE</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DYz5cU7uESV-01.webp" alt="Antes e depois de harmonização full face, vista frontal" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>FULL FACE</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DaOKE1Cq1j1-01.webp" alt="Antes e depois de harmonização facial masculina" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>HARMONIZAÇÃO MASCULINA</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DVrgwd1gLmI-01.webp" alt="Antes e depois de harmonização facial masculina" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>HARMONIZAÇÃO MASCULINA</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/resultado-harmonizacao.webp" alt="Antes e depois de reestruturação facial" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>REESTRUTURAÇÃO</span><span style="color:#6E5A39">OBLÍQUA</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DcZlx5JOBCD-01.webp" alt="Antes e depois de contorno facial, vista oblíqua" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>CONTORNO FACIAL</span><span style="color:#6E5A39">OBLÍQUA</span></figcaption></figure>
-      <figure data-cat="full" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DYf9wsTNhFo-01.webp" alt="Antes e depois de harmonização de perfil: nariz, lábio e mento" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>NARIZ · LÁBIO · MENTO</span><span style="color:#6E5A39">PERFIL</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DXXm9NMjizS-01.webp" alt="Antes e depois de preenchimento labial, vista frontal" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DbTfYgVDvZX-02.webp" alt="Antes e depois de preenchimento labial, vista frontal" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DbTfYgVDvZX-01.webp" alt="Antes e depois de preenchimento labial, vista oblíqua" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">OBLÍQUA</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DR8KTKQjijM-01.webp" alt="Antes e depois de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">DETALHE</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DTONTZyklFv-01.webp" alt="Antes e depois de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">DETALHE</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DX5MdxuDmT1-01.webp" alt="Resultado de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>LÁBIOS</span><span style="color:#6E5A39">DETALHE</span></figcaption></figure>
-      <figure data-cat="labios" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DUUIJKTDb-8-01.webp" alt="Antes e depois de projeção de mento" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>MENTO</span><span style="color:#6E5A39">PERFIL</span></figcaption></figure>
-      <figure data-cat="nariz" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DagmQiuDoTN-01.webp" alt="Antes e depois de perfiloplastia" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>PERFILOPLASTIA</span><span style="color:#6E5A39">PERFIL</span></figcaption></figure>
-      <figure data-cat="nariz" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/resultado-rinomodelacao.webp" alt="Antes e depois de rinomodelação, perfil" width="1000" height="996" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>RINOMODELAÇÃO</span><span style="color:#6E5A39">PERFIL</span></figcaption></figure>
-      <figure data-cat="nariz" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DSIYzDxDpan-02.webp" alt="Antes e depois de rinomodelação, perfil" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>RINOMODELAÇÃO</span><span style="color:#6E5A39">PERFIL</span></figcaption></figure>
-      <figure data-cat="nariz" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DSIYzDxDpan-01.webp" alt="Antes e depois de rinomodelação, detalhe" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>RINOMODELAÇÃO</span><span style="color:#6E5A39">DETALHE</span></figcaption></figure>
-      <figure data-cat="toxina" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DagmQiuDoTN-02.webp" alt="Antes e depois de toxina botulínica full face" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>TOXINA · FULL FACE</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="toxina" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/DU0kaFuDlF2-01.webp" alt="Antes e depois de toxina botulínica na testa" width="830" height="830" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>TOXINA · TESTA</span><span style="color:#6E5A39">DETALHE</span></figcaption></figure>
-      <figure data-cat="oto" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/resultado-otomodelacao-adulto.webp" alt="Antes e depois de otomodelação, vista frontal" width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>OTOMODELAÇÃO</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
-      <figure data-cat="oto" style="margin:0;display:flex;flex-direction:column;gap:8px"><img src="assets/resultado-otomodelacao-feminino.webp" alt="Antes e depois de otomodelação feminina, vista frontal" width="1000" height="1174" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;background:#D3D4CC"><figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:10px;font-weight:600;letter-spacing:0.16em;line-height:1.5"><span>OTOMODELAÇÃO</span><span style="color:#6E5A39">FRONTAL</span></figcaption></figure>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div class="filtros" role="group" aria-label="Filtrar casos por procedimento" style="display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;margin:0 calc(-1 * clamp(20px,4vw,48px));padding:0 clamp(20px,4vw,48px) 4px">
+        <button type="button" class="filtro" data-filtro="all" aria-pressed="true">TODOS</button>
+        <button type="button" class="filtro" data-filtro="full" aria-pressed="false">FULL FACE</button>
+        <button type="button" class="filtro" data-filtro="labios" aria-pressed="false">LÁBIOS E MENTO</button>
+        <button type="button" class="filtro" data-filtro="nariz" aria-pressed="false">NARIZ</button>
+        <button type="button" class="filtro" data-filtro="toxina" aria-pressed="false">TOXINA</button>
+        <button type="button" class="filtro" data-filtro="oto" aria-pressed="false">OTOMODELAÇÃO</button>
+      </div>
+      <div id="lista-casos" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(44%,260px),1fr));gap:clamp(18px,2.4vw,28px) clamp(10px,2vw,20px)">
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DfDTSznotBr-01.webp" alt="Antes e depois de harmonização full face, vista frontal" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>FULL FACE</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DXXm9NMjizS-01.webp" alt="Antes e depois de preenchimento labial, vista frontal" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="nariz"><span class="caso-img"><img src="assets/DagmQiuDoTN-01.webp" alt="Antes e depois de perfiloplastia" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>PERFILOPLASTIA</span><span>PERFIL</span></span></button>
+        <button type="button" class="caso" data-cat="oto"><span class="caso-img"><img src="assets/resultado-otomodelacao-adulto.webp" alt="Antes e depois de otomodelação, vista frontal" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>OTOMODELAÇÃO</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DaOKE1Cq1j1-01.webp" alt="Antes e depois de harmonização facial masculina" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>HARMONIZAÇÃO MASCULINA</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="toxina"><span class="caso-img"><img src="assets/DagmQiuDoTN-02.webp" alt="Antes e depois de toxina botulínica full face" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>TOXINA · FULL FACE</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DYf9wsTNhFo-01.webp" alt="Antes e depois de harmonização de perfil: nariz, lábio e mento" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>NARIZ · LÁBIO · MENTO</span><span>PERFIL</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DbTfYgVDvZX-01.webp" alt="Antes e depois de preenchimento labial, vista oblíqua" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>OBLÍQUA</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DYz5cU7uESV-01.webp" alt="Antes e depois de harmonização full face, vista frontal" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>FULL FACE</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DVrgwd1gLmI-01.webp" alt="Antes e depois de harmonização facial masculina" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>HARMONIZAÇÃO MASCULINA</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/resultado-harmonizacao.webp" alt="Antes e depois de reestruturação facial" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>REESTRUTURAÇÃO</span><span>OBLÍQUA</span></span></button>
+        <button type="button" class="caso" data-cat="full"><span class="caso-img"><img src="assets/DcZlx5JOBCD-01.webp" alt="Antes e depois de contorno facial, vista oblíqua" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>CONTORNO FACIAL</span><span>OBLÍQUA</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DbTfYgVDvZX-02.webp" alt="Antes e depois de preenchimento labial, vista frontal" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>FRONTAL</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DR8KTKQjijM-01.webp" alt="Antes e depois de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>DETALHE</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DTONTZyklFv-01.webp" alt="Antes e depois de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>DETALHE</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DX5MdxuDmT1-01.webp" alt="Resultado de preenchimento labial, detalhe" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>LÁBIOS</span><span>DETALHE</span></span></button>
+        <button type="button" class="caso" data-cat="labios"><span class="caso-img"><img src="assets/DUUIJKTDb-8-01.webp" alt="Antes e depois de projeção de mento" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>MENTO</span><span>PERFIL</span></span></button>
+        <button type="button" class="caso" data-cat="nariz"><span class="caso-img"><img src="assets/resultado-rinomodelacao.webp" alt="Antes e depois de rinomodelação, perfil" width="1000" height="996" loading="lazy"></span><span class="caso-leg"><span>RINOMODELAÇÃO</span><span>PERFIL</span></span></button>
+        <button type="button" class="caso" data-cat="nariz"><span class="caso-img"><img src="assets/DSIYzDxDpan-02.webp" alt="Antes e depois de rinomodelação, perfil" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>RINOMODELAÇÃO</span><span>PERFIL</span></span></button>
+        <button type="button" class="caso" data-cat="nariz"><span class="caso-img"><img src="assets/DSIYzDxDpan-01.webp" alt="Antes e depois de rinomodelação, detalhe" width="1000" height="1000" loading="lazy"></span><span class="caso-leg"><span>RINOMODELAÇÃO</span><span>DETALHE</span></span></button>
+        <button type="button" class="caso" data-cat="toxina"><span class="caso-img"><img src="assets/DU0kaFuDlF2-01.webp" alt="Antes e depois de toxina botulínica na testa" width="830" height="830" loading="lazy"></span><span class="caso-leg"><span>TOXINA · TESTA</span><span>DETALHE</span></span></button>
+        <button type="button" class="caso" data-cat="oto"><span class="caso-img"><img src="assets/resultado-otomodelacao-feminino.webp" alt="Antes e depois de otomodelação feminina, vista frontal" width="1000" height="1174" loading="lazy" style="object-position:50% 30%"></span><span class="caso-leg"><span>OTOMODELAÇÃO</span><span>FRONTAL</span></span></button>
+      </div>
+      <button type="button" id="mais-casos" class="h-invert" style="align-self:center;min-height:48px;padding:0 28px;border:1px solid #111;background:transparent;color:#111;font-size:11px;font-weight:600;letter-spacing:0.2em;cursor:pointer;transition:background .2s,color .2s">VER TODOS OS CASOS (22)</button>
     </div>
   </div>
 </section>
 
 <section id="como-funciona" style="background:#000">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(28px,5vw,64px);align-items:center">
-    <img src="assets/DZ5p09GvI7a-01.webp" alt="Dr. Luís Gabriel Andrade conversando com uma paciente antes do procedimento, no consultório" width="1000" height="1778" loading="lazy" style="width:100%;max-width:520px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%;background:#141414">
-    <div style="display:flex;flex-direction:column;gap:clamp(24px,3.5vw,36px)">
-      <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:0.26em;color:#C2AA84">
-        <span style="width:32px;height:1px;background:#C2AA84"></span>
-        <h2 style="margin:0;font:inherit;letter-spacing:inherit">COMO FUNCIONA</h2>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(32px,5vw,80px);align-items:center">
+    <div data-reveal="mask" style="overflow:hidden;max-width:540px;background:#141414">
+      <img src="assets/DZ5p09GvI7a-01.webp" alt="Dr. Luís Gabriel Andrade conversando com uma paciente antes do procedimento" width="1000" height="1778" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#C2AA84">
+          <span style="width:28px;height:1px;background:#C2AA84"></span>
+          <span>COMO FUNCIONA</span>
+        </div>
+        <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(34px,4.4vw,60px);line-height:1.06">Do primeiro contato <em style="color:#C2AA84">ao plano.</em></h2>
       </div>
-      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0">
-        <li style="border-top:1px solid #34312D;padding:18px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:6px 16px">
-          <span style="font-weight:300;font-size:28px;line-height:1;letter-spacing:0.06em;color:#C2AA84">01</span>
+      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+        <li style="border-top:1px solid #34312D;padding:20px 0;display:grid;grid-template-columns:56px minmax(0,1fr);gap:6px 16px">
+          <span class="serif" style="font-size:34px;line-height:1;color:#C2AA84">1</span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <h3 style="margin:0;font-size:14px;font-weight:500;letter-spacing:0.2em">CONTATO INICIAL</h3>
+            <h3 style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.2em">CONTATO INICIAL</h3>
             <p style="margin:0;font-size:15px;color:#B5B1AA">Você entra em contato para tirar dúvidas e combinar um horário.</p>
           </div>
         </li>
-        <li style="border-top:1px solid #34312D;padding:18px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:6px 16px">
-          <span style="font-weight:300;font-size:28px;line-height:1;letter-spacing:0.06em;color:#C2AA84">02</span>
+        <li style="border-top:1px solid #34312D;padding:20px 0;display:grid;grid-template-columns:56px minmax(0,1fr);gap:6px 16px">
+          <span class="serif" style="font-size:34px;line-height:1;color:#C2AA84">2</span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <h3 style="margin:0;font-size:14px;font-weight:500;letter-spacing:0.2em">AVALIAÇÃO INDIVIDUAL</h3>
+            <h3 style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.2em">AVALIAÇÃO INDIVIDUAL</h3>
             <p style="margin:0;font-size:15px;color:#B5B1AA">Uma conversa sobre seus objetivos e uma análise das características do seu rosto.</p>
           </div>
         </li>
-        <li style="border-top:1px solid #34312D;border-bottom:1px solid #34312D;padding:18px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:6px 16px">
-          <span style="font-weight:300;font-size:28px;line-height:1;letter-spacing:0.06em;color:#C2AA84">03</span>
+        <li style="border-top:1px solid #34312D;border-bottom:1px solid #34312D;padding:20px 0;display:grid;grid-template-columns:56px minmax(0,1fr);gap:6px 16px">
+          <span class="serif" style="font-size:34px;line-height:1;color:#C2AA84">3</span>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <h3 style="margin:0;font-size:14px;font-weight:500;letter-spacing:0.2em">PLANEJAMENTO</h3>
+            <h3 style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.2em">PLANEJAMENTO</h3>
             <p style="margin:0;font-size:15px;color:#B5B1AA">Definição conjunta do que é indicado para o seu caso, com clareza sobre cada etapa.</p>
           </div>
         </li>
@@ -282,18 +342,18 @@ img{display:block;max-width:100%}
 </section>
 
 <section id="conteudos" style="background:#E8E6E3;color:#111">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(24px,3.5vw,36px)">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px">
-      <div style="display:flex;flex-direction:column;gap:clamp(14px,2vw,20px)">
-        <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:0.26em;color:#6E5A39">
-          <span style="width:32px;height:1px;background:#6E5A39"></span>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#6E5A39">
+          <span style="width:28px;height:1px;background:#6E5A39"></span>
           <span>CONTEÚDOS</span>
         </div>
-        <h2 style="margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase">Como a toxina <span style="color:#6E5A39">age no músculo.</span></h2>
+        <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(34px,4.4vw,60px);line-height:1.06">Como a toxina <em style="color:#6E5A39">age no músculo.</em></h2>
       </div>
-      <a href="https://www.instagram.com/p/Dcwv0Q8jiTD/" target="_blank" rel="noopener" class="h-brown" style="font-size:12px;font-weight:600;letter-spacing:0.16em;text-underline-offset:6px;color:#111">VER CARROSSEL NO INSTAGRAM ↗</a>
+      <a href="https://www.instagram.com/p/Dcwv0Q8jiTD/" target="_blank" rel="noopener" class="h-brown" style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-underline-offset:6px;color:#111;padding:8px 0">VER NO INSTAGRAM ↗</a>
     </div>
-    <div style="display:grid;grid-auto-flow:column;grid-auto-columns:min(85%,420px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;overscroll-behavior-x:contain">
+    <div id="carrossel" style="display:grid;grid-auto-flow:column;grid-auto-columns:min(85%,420px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;overscroll-behavior-x:contain;margin:0 calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);scroll-padding-left:clamp(20px,4vw,48px)">
       <img src="assets/marca-01-capa.webp" alt="Botox não é apenas estética." width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;scroll-snap-align:start;background:#000">
       <img src="assets/marca-02.webp" alt="Toxina botulínica: produzida pelo Clostridium botulinum." width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;scroll-snap-align:start;background:#000">
       <img src="assets/marca-03.webp" alt="Ele interfere na comunicação entre nervo e músculo." width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;scroll-snap-align:start;background:#000">
@@ -302,96 +362,175 @@ img{display:block;max-width:100%}
       <img src="assets/marca-06.webp" alt="Com isso, o músculo não se contrai." width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;scroll-snap-align:start;background:#000">
       <img src="assets/marca-07.webp" alt="O resultado: expressão preservada, rugas suavizadas." width="1000" height="1000" loading="lazy" style="width:100%;height:auto;aspect-ratio:1/1;scroll-snap-align:start;background:#000">
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px">
-      <a href="https://www.instagram.com/drluisgabriel_andrade/reel/Db6i4E9IGNS/" target="_blank" rel="noopener" class="h-brown" style="text-decoration:none;color:#111;display:grid;grid-template-columns:128px minmax(0,1fr);gap:16px;align-items:center;border-top:1px solid #C9C5BD;padding-top:18px">
-        <img src="assets/capa-reel-bastidores.webp" alt="Capa do vídeo sobre hialuronidase" width="361" height="640" loading="lazy" style="width:128px;height:160px;object-fit:cover;object-position:50% 18%;background:#D3D4CC">
-        <span style="display:flex;flex-direction:column;gap:8px">
-          <span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">VÍDEO · HIALURONIDASE</span>
-          <span style="font-size:16px;font-weight:500;line-height:1.45">Corrigir também exige precisão.</span>
-        </span>
-      </a>
-      <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-brown" style="text-decoration:none;color:#111;display:flex;flex-direction:column;justify-content:center;gap:6px;border-top:1px solid #C9C5BD;padding-top:18px">
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">@DRLUISGABRIEL_ANDRADE</span>
-        <span style="font-size:16px;font-weight:500;line-height:1.45">Mais publicações no Instagram ↗</span>
-      </a>
-    </div>
+    <a href="https://www.instagram.com/drluisgabriel_andrade/reel/Db6i4E9IGNS/" target="_blank" rel="noopener" class="h-brown" style="text-decoration:none;color:#111;display:grid;grid-template-columns:128px minmax(0,1fr);gap:18px;align-items:center;max-width:620px;border-top:1px solid #C9C5BD;padding-top:18px">
+      <img src="assets/capa-reel-bastidores.webp" alt="Capa do vídeo sobre hialuronidase" width="361" height="640" loading="lazy" style="width:128px;height:160px;object-fit:cover;object-position:50% 18%;background:#D3D4CC">
+      <span style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#6E5A39">VÍDEO · HIALURONIDASE</span>
+        <span class="serif" style="font-size:22px;line-height:1.25">Corrigir também exige precisão.</span>
+      </span>
+    </a>
   </div>
 </section>
 
 <section id="atendimento" style="background:#000">
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)">
-    <div style="display:flex;flex-direction:column;gap:clamp(14px,2vw,20px)">
-      <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:500;letter-spacing:0.26em;color:#C2AA84">
-        <span style="width:32px;height:1px;background:#C2AA84"></span>
-        <span>ATENDIMENTO</span>
+  <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,8vw,120px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:clamp(28px,4vw,48px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:0.24em;color:#C2AA84">
+          <span style="width:28px;height:1px;background:#C2AA84"></span>
+          <span>ATENDIMENTO</span>
+        </div>
+        <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(34px,4.8vw,68px);line-height:1.04">Quatro cidades, <em style="color:#C2AA84">um padrão.</em></h2>
       </div>
-      <h2 style="margin:0;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.3;letter-spacing:0.08em;text-transform:uppercase">Onde <span style="color:#C2AA84">atendemos.</span></h2>
+      <p style="margin:0;max-width:24em;font-size:15px;color:#A8A49D">Escolha a cidade e fale direto pelo WhatsApp para consultar datas.</p>
     </div>
-    <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0 24px">
-      <li style="border-top:1px solid #34312D;padding:18px 0;display:flex;flex-direction:column;gap:6px">
-        <h3 style="margin:0;font-weight:300;font-size:clamp(16px,2vw,24px);letter-spacing:0.12em;line-height:1.35">ILICÍNEA</h3>
-        <span style="font-size:11px;letter-spacing:0.2em;color:#8F8B84">MINAS GERAIS</span>
-      </li>
-      <li style="border-top:1px solid #34312D;padding:18px 0;display:flex;flex-direction:column;gap:6px">
-        <h3 style="margin:0;font-weight:300;font-size:clamp(16px,2vw,24px);letter-spacing:0.12em;line-height:1.35">ALFENAS</h3>
-        <span style="font-size:11px;letter-spacing:0.2em;color:#8F8B84">MINAS GERAIS</span>
-      </li>
-      <li style="border-top:1px solid #34312D;padding:18px 0;display:flex;flex-direction:column;gap:6px">
-        <h3 style="margin:0;font-weight:300;font-size:clamp(16px,2vw,24px);letter-spacing:0.12em;line-height:1.35">POÇOS DE CALDAS</h3>
-        <span style="font-size:11px;letter-spacing:0.2em;color:#8F8B84">MINAS GERAIS</span>
-      </li>
-      <li style="border-top:1px solid #34312D;padding:18px 0;display:flex;flex-direction:column;gap:6px">
-        <h3 style="margin:0;font-weight:300;font-size:clamp(16px,2vw,24px);letter-spacing:0.12em;line-height:1.35">CARMO DA CACHOEIRA</h3>
-        <span style="font-size:11px;letter-spacing:0.2em;color:#8F8B84">MINAS GERAIS</span>
-      </li>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-bottom:1px solid #34312D">
+      <li><a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20em%20Alfenas." target="_blank" rel="noopener" class="h-gold" style="text-decoration:none;color:#E8E6E3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:clamp(16px,2vw,24px) 0;border-top:1px solid #34312D;transition:color .25s"><div style="display:flex;align-items:baseline;gap:16px"><h3 class="serif" style="margin:0;font-size:clamp(28px,4vw,52px);line-height:1.1">Alfenas</h3><span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#8F8B84">MG</span></div><span style="font-size:11px;font-weight:600;letter-spacing:0.2em">AGENDAR ↗</span></a></li>
+      <li><a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20em%20Po%C3%A7os%20de%20Caldas." target="_blank" rel="noopener" class="h-gold" style="text-decoration:none;color:#E8E6E3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:clamp(16px,2vw,24px) 0;border-top:1px solid #34312D;transition:color .25s"><div style="display:flex;align-items:baseline;gap:16px"><h3 class="serif" style="margin:0;font-size:clamp(28px,4vw,52px);line-height:1.1">Poços de Caldas</h3><span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#8F8B84">MG</span></div><span style="font-size:11px;font-weight:600;letter-spacing:0.2em">AGENDAR ↗</span></a></li>
+      <li><a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20em%20Ilic%C3%ADnea." target="_blank" rel="noopener" class="h-gold" style="text-decoration:none;color:#E8E6E3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:clamp(16px,2vw,24px) 0;border-top:1px solid #34312D;transition:color .25s"><div style="display:flex;align-items:baseline;gap:16px"><h3 class="serif" style="margin:0;font-size:clamp(28px,4vw,52px);line-height:1.1">Ilicínea</h3><span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#8F8B84">MG</span></div><span style="font-size:11px;font-weight:600;letter-spacing:0.2em">AGENDAR ↗</span></a></li>
+      <li><a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20em%20Carmo%20da%20Cachoeira." target="_blank" rel="noopener" class="h-gold" style="text-decoration:none;color:#E8E6E3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding:clamp(16px,2vw,24px) 0;border-top:1px solid #34312D;transition:color .25s"><div style="display:flex;align-items:baseline;gap:16px"><h3 class="serif" style="margin:0;font-size:clamp(28px,4vw,52px);line-height:1.1">Carmo da Cachoeira</h3><span style="font-size:10px;font-weight:600;letter-spacing:0.22em;color:#8F8B84">MG</span></div><span style="font-size:11px;font-weight:600;letter-spacing:0.2em">AGENDAR ↗</span></a></li>
     </ul>
-    <p style="margin:0;font-size:15px;color:#A8A49D;max-width:36em">Consulte datas e disponibilidade em cada cidade pelo contato.</p>
   </div>
 </section>
 
-<section id="contato" style="background:#E8E6E3;color:#111">
-  <div style="max-width:960px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(18px,2.6vw,28px)">
-    <div style="display:flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:0.26em;color:#6E5A39">
-      <span style="width:32px;height:1px;background:#6E5A39"></span>
-      <span>CONTATO</span>
-      <span style="width:32px;height:1px;background:#6E5A39"></span>
+<section id="contato" style="background:#F4F2EE;color:#111">
+  <div style="max-width:960px;margin:0 auto;padding:clamp(64px,9vw,136px) clamp(20px,4vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(18px,2.6vw,28px)">
+    <span style="font-size:11px;font-weight:600;letter-spacing:0.24em;color:#6E5A39">CONTATO</span>
+    <h2 data-reveal="up" class="serif" style="margin:0;font-size:clamp(40px,6.4vw,92px);line-height:1;letter-spacing:-0.01em;text-wrap:balance">Agende sua <em style="color:#6E5A39">avaliação.</em></h2>
+    <p style="margin:0;max-width:28em;font-size:17px;color:#3B3A37">O primeiro passo é uma conversa sobre o que você busca.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%;max-width:560px">
+      <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="h-dark" style="flex:1 1 220px;text-decoration:none;background:#000;color:#E8E6E3;padding:18px 24px;font-size:12px;font-weight:600;letter-spacing:0.16em;transition:background .25s">AGENDAR PELO WHATSAPP</a>
+      <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-ink" style="flex:1 1 160px;text-decoration:none;border:1px solid #8A857C;color:#111;padding:17px 24px;font-size:12px;font-weight:600;letter-spacing:0.16em">INSTAGRAM</a>
     </div>
-    <h2 style="margin:0;font-weight:300;font-size:clamp(26px,4.6vw,56px);line-height:1.22;letter-spacing:0.08em;text-transform:uppercase;text-wrap:balance">Agende sua <span style="color:#6E5A39">avaliação.</span></h2>
-    <p style="margin:0;max-width:30em;font-size:17px;color:#3B3A37">O primeiro passo é uma conversa sobre o que você busca.</p>
-    <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-dark" style="text-decoration:none;background:#000;color:#E8E6E3;padding:17px 28px;font-size:12px;font-weight:600;letter-spacing:0.16em;transition:background .2s">FALAR PELO INSTAGRAM</a>
-    <span style="font-size:12px;letter-spacing:0.18em;color:#55524C">@DRLUISGABRIEL_ANDRADE</span>
+    <a href="tel:+5535998262230" class="h-ink" style="font-size:13px;letter-spacing:0.12em;color:#55524C;text-decoration:none">+55 35 99826-2230</a>
   </div>
 </section>
 </main>
 
 <footer style="background:#000;border-top:1px solid #1E1D1B">
-  <div style="max-width:1280px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 32px;display:flex;flex-direction:column;gap:28px">
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:start;gap:32px">
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <span style="font-size:14px;letter-spacing:0.24em;color:#C2AA84">DR. LUÍS GABRIEL ANDRADE</span>
-        <span style="width:48px;height:1px;background:#C2AA84"></span>
-        <span style="font-size:10px;letter-spacing:0.32em;color:#E8E6E3">HARMONIZAÇÃO FACIAL · OTOMODELAÇÃO</span>
+  <div style="max-width:1320px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 32px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:start;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span class="serif" style="font-size:22px;color:#E8E6E3">Dr. Luís Gabriel Andrade</span>
+        <span style="font-size:9px;font-weight:500;letter-spacing:0.28em;color:#C2AA84">HARMONIZAÇÃO FACIAL · OTOMODELAÇÃO</span>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px 32px;font-size:12px;font-weight:500;letter-spacing:0.16em">
-        <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-light" style="text-decoration:none;color:#BDB9B2">INSTAGRAM ↗</a>
-        <a href="#contato" class="h-light" style="text-decoration:none;color:#BDB9B2">AGENDAR AVALIAÇÃO</a>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:11px;font-weight:500;letter-spacing:0.16em">
+        <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">WHATSAPP ↗</a>
+        <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-light" style="text-decoration:none;color:#BDB9B2;padding:8px 0">INSTAGRAM ↗</a>
       </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:24px;border-top:1px solid #1E1D1B;font-size:12px;color:#8F8B84">
-      <span>Ilicínea · Alfenas · Poços de Caldas · Carmo da Cachoeira — MG</span>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 32px;padding-top:20px;border-top:1px solid #1E1D1B;font-size:12px;color:#8F8B84">
+      <span>Alfenas · Poços de Caldas · Ilicínea · Carmo da Cachoeira — MG</span>
       <span style="letter-spacing:0.12em">CRO-MG 76814</span>
     </div>
   </div>
 </footer>
 
+<div id="barra" class="barra" style="position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(0,0,0,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #1E1D1B">
+  <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:50px;text-decoration:none;background:#C2AA84;color:#000;font-size:12px;font-weight:600;letter-spacing:0.16em">AGENDAR PELO WHATSAPP</a>
+</div>
+<div class="so-movel" aria-hidden="true" style="height:72px;background:#000"></div>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Caso ampliado" hidden style="position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:64px 16px 24px">
+  <button type="button" id="lb-fechar" class="lb-btn" aria-label="Fechar" style="position:absolute;top:12px;right:12px;font-size:20px">×</button>
+  <img id="lb-img" alt="" style="max-width:min(100%,1100px);max-height:76vh;width:auto;height:auto;object-fit:contain">
+  <div id="lb-nav" style="display:flex;align-items:center;gap:16px;color:#E8E6E3">
+    <button type="button" id="lb-ant" class="lb-btn" aria-label="Caso anterior">‹</button>
+    <span id="lb-txt" style="min-width:200px;text-align:center;font-size:11px;font-weight:600;letter-spacing:0.18em"></span>
+    <button type="button" id="lb-prox" class="lb-btn" aria-label="Próximo caso">›</button>
+  </div>
+</div>
+
 <script>
-document.querySelectorAll('.filtro').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var f = b.dataset.filtro;
-    document.querySelectorAll('.filtro').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-    document.querySelectorAll('#lista-casos figure').forEach(function (c) { c.hidden = f !== 'all' && c.dataset.cat !== f; });
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return [].slice.call(document.querySelectorAll(s)); };
+
+  // Menu do celular
+  var menu = $('#menu-movel'), menuBtn = $('#menu-btn');
+  function setMenu(aberto) {
+    menu.hidden = !aberto;
+    menuBtn.setAttribute('aria-expanded', String(aberto));
+    menuBtn.textContent = aberto ? 'FECHAR' : 'MENU';
+    atualizaBarra();
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
+  $$('#menu-movel a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Barra fixa de WhatsApp (só aparece no celular, via CSS)
+  var barra = $('#barra'), lb = $('#lb');
+  function atualizaBarra() { barra.classList.toggle('on', scrollY > 560 && menu.hidden && lb.hidden); }
+  addEventListener('scroll', atualizaBarra, { passive: true });
+
+  // Antes e depois
+  var ba = $('#ba');
+  ba.addEventListener('input', function () {
+    $('#ba-depois').style.clipPath = 'inset(0 0 0 ' + ba.value + '%)';
+    $('#ba-linha').style.left = ba.value + '%';
   });
-});
+
+  // Filtro, "ver todos" e ampliação dos casos
+  var casos = $$('.caso'), filtro = 'all', expandido = false, lista = [], atual = -1, mais = $('#mais-casos');
+  function render() {
+    lista = casos.filter(function (c) { return filtro === 'all' || c.dataset.cat === filtro; });
+    casos.forEach(function (c) { c.hidden = true; });
+    lista.forEach(function (c, i) { c.hidden = !expandido && i >= 8; });
+    $$('.filtro').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filtro === filtro)); });
+    mais.hidden = lista.length <= 8;
+    mais.textContent = expandido ? 'VER MENOS' : 'VER TODOS OS CASOS (' + lista.length + ')';
+  }
+  function setFiltro(f) { filtro = f; expandido = false; render(); }
+  $$('.filtro').forEach(function (b) { b.addEventListener('click', function () { setFiltro(b.dataset.filtro); }); });
+  $$('[data-ir]').forEach(function (a) { a.addEventListener('click', function () { setFiltro(a.dataset.ir); }); });
+  mais.addEventListener('click', function () { expandido = !expandido; render(); });
+
+  function mostra(i) {
+    atual = (i + lista.length) % lista.length;
+    var img = lista[atual].querySelector('img');
+    $('#lb-img').src = img.src; $('#lb-img').alt = img.alt;
+    $('#lb-txt').textContent = lista[atual].querySelector('.caso-leg span').textContent + ' · ' + (atual + 1) + ' / ' + lista.length;
+  }
+  function abre(i) { mostra(i); lb.hidden = false; atualizaBarra(); $('#lb-fechar').focus(); }
+  function fecha() { lb.hidden = true; atualizaBarra(); if (lista[atual]) lista[atual].focus(); }
+  casos.forEach(function (c) {
+    c.setAttribute('aria-label', 'Ampliar: ' + c.querySelector('img').alt);
+    c.addEventListener('click', function () { abre(lista.indexOf(c)); });
+  });
+  lb.addEventListener('click', fecha);
+  $('#lb-img').addEventListener('click', function (e) { e.stopPropagation(); });
+  $('#lb-nav').addEventListener('click', function (e) { e.stopPropagation(); });
+  $('#lb-ant').addEventListener('click', function () { mostra(atual - 1); });
+  $('#lb-prox').addEventListener('click', function () { mostra(atual + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) setMenu(false);
+    if (lb.hidden) return;
+    if (e.key === 'Escape') fecha();
+    if (e.key === 'ArrowRight') mostra(atual + 1);
+    if (e.key === 'ArrowLeft') mostra(atual - 1);
+  });
+  render();
+
+  // Animações de entrada
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ease = 'cubic-bezier(.2,.7,.2,1)';
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target._rv.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; el.style.clipPath = 'inset(0 0 0 0)'; });
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  $$('[data-reveal]').forEach(function (el) {
+    var mask = el.dataset.reveal === 'mask';
+    if (!mask && el.getBoundingClientRect().top < innerHeight * 0.92) return;
+    if (mask) { el.style.clipPath = 'inset(100% 0 0 0)'; el.style.transition = 'clip-path 1.3s cubic-bezier(.7,0,.2,1)'; }
+    else { el.style.opacity = '0'; el.style.transform = 'translateY(28px)'; el.style.transition = 'opacity .9s ' + ease + ', transform .9s ' + ease; }
+    // um elemento todo recortado nunca "entra" na tela; por isso a máscara observa o bloco em volta
+    var alvo = mask ? el.parentElement : el;
+    if (!alvo._rv) { alvo._rv = []; requestAnimationFrame(function () { io.observe(alvo); }); }
+    alvo._rv.push(el);
+  });
+})();
 </script>
 </body>
 </html>
