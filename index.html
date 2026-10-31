@@ -69,7 +69,11 @@ body{margin:0;background:#000;color:#E8E6E3;font-family:Montserrat,system-ui,san
 a{color:inherit}
 a:hover{color:#C2AA84}
 button{font-family:inherit}
-:focus-visible{outline:1px solid #C2AA84;outline-offset:4px}
+:focus-visible{outline:2px solid #C2AA84;outline-offset:4px}
+/* nas seções claras o dourado some (2:1); foco escuro */
+#sobre :focus-visible,#casos :focus-visible,#conteudos :focus-visible,#contato :focus-visible{outline-color:#111}
+/* o controle do antes/depois é invisível; o foco aparece na moldura */
+#ba-box:has(#ba:focus-visible){outline:2px solid #111;outline-offset:4px}
 img{display:block;max-width:100%}
 .serif{font-family:'Bodoni Moda',Didot,serif;font-weight:400}
 .zi{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
@@ -246,7 +250,7 @@ img{display:block;max-width:100%}
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
-      <div data-reveal="up" style="position:relative;width:100%;max-width:560px;aspect-ratio:4/5;overflow:hidden;background:#D3D4CC;user-select:none;touch-action:pan-y">
+      <div id="ba-box" data-reveal="up" style="position:relative;width:100%;max-width:560px;aspect-ratio:4/5;overflow:hidden;background:#D3D4CC;user-select:none;touch-action:pan-y">
         <div role="img" aria-label="Antes do preenchimento labial" style="position:absolute;inset:0;background-image:url(assets/DXXm9NMjizS-01.webp);background-size:200% auto;background-position:0% 58%"></div>
         <div id="ba-depois" role="img" aria-label="Depois do preenchimento labial" style="position:absolute;inset:0;background-image:url(assets/DXXm9NMjizS-01.webp);background-size:200% auto;background-position:100% 58%;clip-path:inset(0 0 0 50%)"></div>
         <div id="ba-linha" style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:#FFFFFF;pointer-events:none">
@@ -402,7 +406,7 @@ img{display:block;max-width:100%}
       <a href="https://wa.me/5535998262230?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="h-dark" style="flex:1 1 220px;text-decoration:none;background:#000;color:#E8E6E3;padding:18px 24px;font-size:12px;font-weight:600;letter-spacing:0.16em;transition:background .25s">AGENDAR PELO WHATSAPP</a>
       <a href="https://www.instagram.com/drluisgabriel_andrade/" target="_blank" rel="noopener" class="h-ink" style="flex:1 1 160px;text-decoration:none;border:1px solid #8A857C;color:#111;padding:17px 24px;font-size:12px;font-weight:600;letter-spacing:0.16em">INSTAGRAM</a>
     </div>
-    <a href="tel:+5535998262230" class="h-ink" style="font-size:13px;letter-spacing:0.12em;color:#55524C;text-decoration:none">+55 35 99826-2230</a>
+    <a href="tel:+5535998262230" class="h-ink" style="display:inline-block;padding:12px 8px;margin:-12px -8px;font-size:13px;letter-spacing:0.12em;color:#55524C;text-decoration:none">+55 35 99826-2230</a>
   </div>
 </section>
 </main>
@@ -446,10 +450,16 @@ img{display:block;max-width:100%}
   var $ = function (s) { return document.querySelector(s); };
   var $$ = function (s) { return [].slice.call(document.querySelectorAll(s)); };
 
+  // Com menu ou ampliação aberta, o resto da página sai do Tab
+  function isola(on, manter) {
+    [].forEach.call(document.body.children, function (c) { if (manter.indexOf(c) < 0) c.inert = on; });
+  }
+
   // Menu do celular
   var menu = $('#menu-movel'), menuBtn = $('#menu-btn');
   function setMenu(aberto) {
     menu.hidden = !aberto;
+    isola(aberto, [menu, $('header')]);
     menuBtn.setAttribute('aria-expanded', String(aberto));
     menuBtn.textContent = aberto ? 'FECHAR' : 'MENU';
     atualizaBarra();
@@ -490,8 +500,8 @@ img{display:block;max-width:100%}
     $('#lb-img').src = img.src; $('#lb-img').alt = img.alt;
     $('#lb-txt').textContent = lista[atual].querySelector('.caso-leg span').textContent + ' · ' + (atual + 1) + ' / ' + lista.length;
   }
-  function abre(i) { mostra(i); lb.hidden = false; atualizaBarra(); $('#lb-fechar').focus(); }
-  function fecha() { lb.hidden = true; atualizaBarra(); if (lista[atual]) lista[atual].focus(); }
+  function abre(i) { mostra(i); lb.hidden = false; isola(true, [lb]); atualizaBarra(); $('#lb-fechar').focus(); }
+  function fecha() { lb.hidden = true; isola(false, [lb]); atualizaBarra(); if (lista[atual]) lista[atual].focus(); }
   casos.forEach(function (c) {
     c.setAttribute('aria-label', 'Ampliar: ' + c.querySelector('img').alt);
     c.addEventListener('click', function () { abre(lista.indexOf(c)); });
@@ -502,7 +512,7 @@ img{display:block;max-width:100%}
   $('#lb-ant').addEventListener('click', function () { mostra(atual - 1); });
   $('#lb-prox').addEventListener('click', function () { mostra(atual + 1); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !menu.hidden) setMenu(false);
+    if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); }
     if (lb.hidden) return;
     if (e.key === 'Escape') fecha();
     if (e.key === 'ArrowRight') mostra(atual + 1);
